@@ -15,6 +15,7 @@ class HousesService {
     }
     createHouse(formData) {
         let newHouse = new House(formData)
+        console.log(newHouse)
         AppState.houses.push(newHouse)
         AppState.emit('houses')
         _saveHouses()
